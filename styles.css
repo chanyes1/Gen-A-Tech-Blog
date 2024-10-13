@@ -1,0 +1,189 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    /* Adjust height to accommodate content */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align links and logo to the left */
+}
+
+.logo-links {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow links to wrap into two rows */
+    gap: 10px;
+}
+
+.logo-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.site-title {
+    text-align: center;
+    /* Center the title */
+}
+
+.site-title h1 {
+    font-size: 1.5rem;
+}
+
+.site-title h2 {
+    font-size: 3rem;
+}
+
+.vertical-separator {
+    width: 2px;
+    background-color: white;
+    height: 100px;
+    margin: 0 15px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+.vertical-separator {
+    background-color: #ccc;
+    width: 2px;
+    margin: 0 15px;
+}
+
+/* Ads Section */
+.ads {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-block {
+    background-color: #ccc;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* News Section (Centered) */
+.news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the news content */
+}
+
+.news-content {
+    display: flex;
+    justify-content: center;
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.news-text {
+    max-width: 600px;
+    /* Set a max width for better readability */
+}
+
+/* Reading Section (26% of total height) */
+.reading-section {
+    flex: 0 0 26%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 150px);
+    /* Take up the full height minus the header */
+}
+
+.category-button {
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.content-box {
+    margin-top: 0;
+    /* Remove space between sections */
+    padding: 15px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.content-box.hidden {
+    display: none;
+}
+
+/* Daily Quote (Positioned at the bottom of the reading section) */
+.daily-quote {
+    font-style: italic;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    /* Add a subtle separator */
+}
+
+/* Flexibility */
+@media (max-width: 768px) {
+
+    .header-content,
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-section,
+    .reading-section {
+        width: 100%;
+    }
+}
